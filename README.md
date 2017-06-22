@@ -86,3 +86,15 @@ app.listen(3000, function(){
   console.log("listening on port 3000")
 });
 ```
+
+__request parameter__
+
+Request parameter takes client data entered in the form of ':someText' and slaps it into the website along with whatever stuff you want to be with it.
+```js
+// :name --> Means it is a req parameter
+
+app.get('/greeting/:name', function(req, res){
+  var yourName = req.params.name;
+  res.send("Nice to meet you, " + yourName + ", i just stole ur stuffz")
+});
+```

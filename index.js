@@ -21,11 +21,8 @@ app.get("/instagrams",function(req,res){
 });
 
 app.post("/instagrams",function(req,res){
-
   var newGram = { title: req.body.title, img: req.body.img, date: makeDate(0) };
-
   instagrams.push(newGram);
-
   res.json({ message: "Post success", data: instagrams });
 });
 
